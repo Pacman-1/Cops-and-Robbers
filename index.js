@@ -7,12 +7,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     let board =['','','','','','','','',''];
-    let currentPlayer='X';
+    let currentPlayer='Cops';
     let isGameActive=true;
 
     // end game statements
-    const PLAYERX_WON="PLAYERX_Won"
-    const PLAYERO_WON="PLAYERO_Won"
+    const PLAYERX_WON="Robbers_Won"
+    const PLAYERO_WON="Cops_Won"
     const TIE="TIE"
 
     const winningConditions = [
@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
 
     if (roundWon) {
-            announce(currentPlayer === 'X' ? PLAYERX_WON : PLAYERO_WON);
+            announce(currentPlayer === 'Cops' ? PLAYERX_WON : PLAYERO_WON);
             isGameActive = false;
             return;
         }
@@ -56,10 +56,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const announce = (type) => {
         switch(type){
             case PLAYERO_WON:
-                announcer.innerHTML = 'Player <span class="playerO">O</span> Won';
+                announcer.innerHTML = '<span class="Robbers">Robbers</span> Won';
                 break;
             case PLAYERX_WON:
-                announcer.innerHTML = 'Player <span class="playerX">X</span> Won';
+                announcer.innerHTML = '<span class="Cops">Cops</span> Won';
                 break;
             case TIE:
                 announcer.innerText = 'Tie';
@@ -81,11 +81,12 @@ window.addEventListener('DOMContentLoaded', () => {
         board[index] = currentPlayer;
     }
 
+    // O-Cops X-Robbers
     const changePlayer = () => {
-        playerDisplay.classList.remove(`player${currentPlayer}`);
-        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        playerDisplay.classList.remove(`${currentPlayer}`);
+        currentPlayer = currentPlayer === 'Cops' ? 'Robbers' : 'Cops'; // Change Front end icon/text
         playerDisplay.innerText = currentPlayer;
-        playerDisplay.classList.add(`player${currentPlayer}`);
+        playerDisplay.classList.add(`${currentPlayer}`);
     }
 
 
@@ -94,7 +95,7 @@ window.addEventListener('DOMContentLoaded', () => {
         // checking if game action is valid and if the game is still going on
         if(isValidAction(tile) && isGameActive) {
             tile.innerText = currentPlayer;
-            tile.classList.add(`player${currentPlayer}`);
+            tile.classList.add(`${currentPlayer}`);
             updateBoard(index);
             handleResultValidation();
             changePlayer();

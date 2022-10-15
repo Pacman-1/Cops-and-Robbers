@@ -8,10 +8,13 @@
     padding-top:1px; /* prevents margin collape. */ 
 }
 .title{
-    color: white;
     text-align: center;
     font-size: 40px;
     margin-top: 10%;
+    font-size: 72px;
+    background: -webkit-linear-gradient(90deg,rgb(8, 74, 255), rgb(223, 8, 8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .display{
     color: white;
@@ -40,10 +43,10 @@
     font-size: 50px;
     cursor: pointer; /* just so the user know the element is clickable */
 }
-.playerX{
+.Robbers{
     color: red ;
 }
-.playerO{
+.Cops{
 color: aqua;
 }
 .controls{
