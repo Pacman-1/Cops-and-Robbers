@@ -3,7 +3,7 @@
     padding: 0;
 }
 .background{
-    background-color: #12181B;
+    background: linear-gradient(to bottom,rgb(6, 8, 54), rgb(38, 13, 13));
     height: 100vh;
     padding-top:1px; /* prevents margin collape. */ 
 }
