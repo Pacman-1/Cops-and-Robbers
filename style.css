@@ -4,17 +4,29 @@
 }
 .background{
     background: linear-gradient(to bottom,rgb(6, 8, 54), rgb(38, 13, 13));
+    background-image: url(police.webp);
     height: 100vh;
     padding-top:1px; /* prevents margin collape. */ 
 }
 .title{
     text-align: center;
     font-size: 40px;
+    justify-content: center;
     margin-top: 10%;
-    font-size: 72px;
-    background: -webkit-linear-gradient(90deg,rgb(8, 74, 255), rgb(223, 8, 8));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 52px;
+  display: flex;
+}
+.title h1{
+    padding: 10px;
+}
+#cops{
+    color: rgb(0, 106, 255);
+}
+#robbers{
+    color: rgb(186, 26, 5);
+}
+#and{
+    color: rgba(0, 0, 0, 0.958);
 }
 .display{
     color: white;
@@ -44,10 +56,10 @@
     cursor: pointer; /* just so the user know the element is clickable */
 }
 .Robbers{
-    color: red ;
+    color: rgb(186, 26, 5);
 }
 .Cops{
-color: aqua;
+    color: rgb(0, 106, 255);
 }
 .controls{
     display: flex;
