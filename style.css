@@ -3,8 +3,8 @@
     padding: 0;
 }
 .background{
-    background: linear-gradient(to bottom,rgb(6, 8, 54), rgb(38, 13, 13));
-    background-image: url(police.webp);
+    background: linear-gradient(to right,rgb(7, 9, 62), black, rgb(58, 21, 21));
+    
     height: 100vh;
     padding-top:1px; /* prevents margin collape. */ 
 }
@@ -26,7 +26,7 @@
     color: rgb(186, 26, 5);
 }
 #and{
-    color: rgba(0, 0, 0, 0.958);
+    color: rgba(86, 78, 107, 0.958);
 }
 .display{
     color: white;
