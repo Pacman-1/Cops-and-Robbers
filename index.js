@@ -70,7 +70,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // checking if that tile has a value or not
     const isValidAction = (tile) => {
-        if (tile.innerText === 'X' || tile.innerText === 'O'){
+        if (tile.innerText === 'Robbers' || tile.innerText === 'Cops'){
             return false;
         }
 
@@ -108,14 +108,14 @@ window.addEventListener('DOMContentLoaded', () => {
         isGameActive = true;
         announcer.classList.add('hide');
 
-        if (currentPlayer === 'O') {
+        if (currentPlayer === 'Cops') {
             changePlayer();
         }
 
         tiles.forEach(tile => {
             tile.innerText = '';
-            tile.classList.remove('playerX');
-            tile.classList.remove('playerO');
+            tile.classList.remove('Robbers');
+            tile.classList.remove('Cops');
         });
     }
 
