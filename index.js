@@ -5,8 +5,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const resetButton = document.querySelector('#reset');
     const announcer = document.querySelector('.announcer');
 
-    var CopsImg = "<img src='cops.png' width=50px />";
-    var RobbbersImg = "<img src='robbers.png' width=50px />";
     let board =['','','','','','','','',''];
     let currentPlayer=  'Cops';
     let isGameActive=true;
