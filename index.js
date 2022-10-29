@@ -5,9 +5,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const resetButton = document.querySelector('#reset');
     const announcer = document.querySelector('.announcer');
 
-
+    var CopsImg = "<img src='cops.png' width=50px />";
+    var RobbbersImg = "<img src='robbers.png' width=50px />";
     let board =['','','','','','','','',''];
-    let currentPlayer='Cops';
+    let currentPlayer=  'Cops';
     let isGameActive=true;
 
     // end game statements
@@ -75,8 +76,10 @@ window.addEventListener('DOMContentLoaded', () => {
         }
 
         return true;
+        
     };
 
+    
     const updateBoard =  (index) => {
         board[index] = currentPlayer;
     }
@@ -84,7 +87,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // O-Cops X-Robbers
     const changePlayer = () => {
         playerDisplay.classList.remove(`${currentPlayer}`);
-        currentPlayer = currentPlayer === 'Cops' ? 'Robbers' : 'Cops'; // Change Front end icon/text
+        currentPlayer = currentPlayer === 'Cops' ? 'Robbers' : 'Cops'; // Change Front end text
         playerDisplay.innerText = currentPlayer;
         playerDisplay.classList.add(`${currentPlayer}`);
     }
@@ -94,7 +97,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
         // checking if game action is valid and if the game is still going on
         if(isValidAction(tile) && isGameActive) {
-            tile.innerText = currentPlayer;
+            
+            tile.innerText= currentPlayer 
             tile.classList.add(`${currentPlayer}`);
             updateBoard(index);
             handleResultValidation();

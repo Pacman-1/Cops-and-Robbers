@@ -4,7 +4,6 @@
 }
 .background{
     background: linear-gradient(to right,rgb(7, 9, 62), black, rgb(58, 21, 21));
-    
     height: 100vh;
     padding-top:1px; /* prevents margin collape. */ 
 }
@@ -56,9 +55,11 @@
     cursor: pointer; /* just so the user know the element is clickable */
 }
 .Robbers{
+    font-size: 25px;
     color: rgb(186, 26, 5);
 }
 .Cops{
+    font-size: 25px;
     color: rgb(0, 106, 255);
 }
 .controls{
