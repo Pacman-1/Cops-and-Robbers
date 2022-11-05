@@ -55,11 +55,11 @@
     cursor: pointer; /* just so the user know the element is clickable */
 }
 .Robbers{
-    font-size: 25px;
+    font-size: 27px;
     color: rgb(186, 26, 5);
 }
 .Cops{
-    font-size: 25px;
+    font-size: 27px;
     color: rgb(0, 106, 255);
 }
 .controls{
